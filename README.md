@@ -9,7 +9,7 @@
 - Lead front-end dev: Brandon Haupt
 - Lead back-end dev: Samantha Whitford
 
-####[Trello Board Link](https://trello.com/b/dbz1Qnlz/unit-3-project)
+[Trello Board Link](https://trello.com/b/dbz1Qnlz/unit-3-project)
 
 ### Technologies Used
 

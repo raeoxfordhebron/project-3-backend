@@ -9,18 +9,24 @@
 - Lead front-end dev: Brandon Haupt
 - Lead back-end dev: Samantha Whitford
 
-[Trello Board Link](https://trello.com/b/dbz1Qnlz/unit-3-project)
+####[Trello Board Link](https://trello.com/b/dbz1Qnlz/unit-3-project)
 
 ### Technologies Used
 
 - JavaScript
 - HTML
-- CSS/SCSS
 - Express.js
-- React
 - Mongoose
 - MongoDB
 - render.com
+
+### Routes
+
+- Index 
+- Delete
+- Update
+- Create
+- Show
 
 ### Schema
 
@@ -44,13 +50,14 @@
 | Day | Goal |
 |-----|------|
 | 1/17 | First meeting - discuss project ideas. Work on things needed to get project approved. Set up project and create main and dev branch in GitHub.|
+| 1/18 | Create Trello Board and Readmes.
 | 1/21 | Work on a Trello Board - claim cards and work on cards.|
-| 1/22 - ?| Group members work on cards on their own time. Claim more card when done with a card. |
-| ? | Second meeting - discuss what else needs to be done and work on finishing assignment. |
-| ? | Meet to test app and make final changes. Check/test deployed site and submit. |
-| ? | Meet to discuss presentation. |
+| 1/22 - 1/24 | Group members work on cards on their own time. Claim more card when done with a card. |
+| 1/25 | Second meeting - discuss what else needs to be done and work on finishing assignment. |
+| 1/26 | Meet to test app and make final changes. Check/test deployed site and submit. |
+| 1/27 | Meet to discuss presentation. |
 <!-- prettier-ignore-end -->
 
 ### Link to Project
 
-[Deployed Project Page]()
+[Deployed Project Page](https://project-3-backend-cm7x.onrender.com)

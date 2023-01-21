@@ -1,6 +1,6 @@
 # Road Trip Buddy
 
-##### This app lets users keep track of their destinations as they emark on a road trip. Users will be able to add a name and a link for their destinations on their journey. Users will be able to see the list of places they will visit, click on one and view an individual destination, delete and update that destination as well as check it off as visited.
+##### This app lets users keep track of their destinations as they emark on a road trip. Users will be able to add a name and a link for their destinations on their journey. Users will be able to see the list of places they will visit, click on one and view an individual destination, delete and update that destination as well as check it off as visited. The words places and destinations are interchangeable.
 
 ##### Group members:
 
@@ -26,26 +26,26 @@
 App --> Header 
 App --> Outlet 
 Outlet -- "/" --> Index
-Outlet -- "/trips/:id" --> Show
-Outlet -- "/trips/create" --> createAction
-Outlet -- "/trips/update/:id" --> updateAction
-Outlet -- "/trips/delete/:id" --> deleteAction
+Outlet -- "/places/:id" --> Show
+Outlet -- "/places/create" --> createAction
+Outlet -- "/places/update/:id" --> updateAction
+Outlet -- "/places/delete/:id" --> deleteAction
 ```
 
 | Route | Element | Loader | Action | Summary |
 | ----- | ------- | ------ | ------ | ------- |
-| /     | Index   | indexLoader |   | Loads up list of locations |         |
-| /trips/:id | Show | showLoader |  | Loads up an individual location | 
-| /trips/create | Create|        | createAction | Handles submission of create form for locations | 
-| /trips/update/:id | Update  |   | updateAction | Handles submission of update form for locations | 
-| /trips/delete/:id | Delete  |   | deleteAction | Handles submission of delete form for locations  
-
+| /     | Index   | indexLoader |   | Loads up list of places |         |
+| /trips/:id | Show | showLoader |  | Loads up an individual place | 
+| /trips/create | Create|        | createAction | Handles submission of create form for one place | 
+| /trips/update/:id | Update  |   | updateAction | Handles submission of update form for one place | 
+| /trips/delete/:id | Delete  |   | deleteAction | Handles submission of delete form for one place |  
 
 ### User Stories
 
-- As a user, I should be able to see a list of my data.
-- As a user, I want to click on one of the items of data and it will appear on the index page.
-- As a user, I want to be able to edit and delete items.
+- As a user, I want to be able to see a list of my places.
+- As a user, I want to click on one of the places and it will appear on the index page - which will be the show page at that point.
+- As a user, I want to be able to add, edit, and delete places.
+- As a user, I want to be able to check off places as I visit them.
 
 ### Schema
 

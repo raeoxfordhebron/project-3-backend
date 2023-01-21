@@ -36,9 +36,9 @@ Outlet -- "/trips/delete/:id" --> deleteAction
 | ----- | ------- | ------ | ------ | ------- |
 | /     | Index   | indexLoader |   | Loads up list of locations |         |
 | /trips/:id | Show | showLoader |  | Loads up an individual location | 
-| /trips/create | |        | createAction | Handles submission of create form for locations | 
-| /trips/update/:id |   |   | updateAction | Handles submission of update form for locations | 
-| /trips/delete/:id |   |   | deleteAction | Handles submission of delete form for locations  
+| /trips/create | Create|        | createAction | Handles submission of create form for locations | 
+| /trips/update/:id | Update  |   | updateAction | Handles submission of update form for locations | 
+| /trips/delete/:id | Delete  |   | deleteAction | Handles submission of delete form for locations  
 
 
 ### User Stories
@@ -53,15 +53,17 @@ Outlet -- "/trips/delete/:id" --> deleteAction
 
 ### Wireframes/Mockups
 
-##### Index Page
+##### Index Page - Desktop and mobile
 
 <img src="https://i.imgur.com/a0CAsYt.png" width="600px">
 <img src="https://i.imgur.com/KL81RA6.png" width="600px">
+<img src="https://i.imgur.com/qHv09pg.png" width="300px">
 
 ##### Show Page
 
 <img src="https://i.imgur.com/NpWI7hJ.png" width="600px">
 <img src="https://i.imgur.com/YF0hRze.png" width="600px">
+<img src="https://i.imgur.com/WOa3m2i.png" width="300px">
 
 <!-- prettier-ignore-start -->
 ### Daily Plan

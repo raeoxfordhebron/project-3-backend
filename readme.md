@@ -27,6 +27,7 @@
 - Update
 - Create
 - Show
+<img src="https://i.imgur.com/DmNyRPY.png" width="800px">
 
 ### User Stories
 

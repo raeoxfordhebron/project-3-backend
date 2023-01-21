@@ -9,7 +9,7 @@
 - Lead front-end dev: Brandon Haupt
 - Lead back-end dev: Samantha Whitford
 
-####[Trello Board Link](https://trello.com/b/dbz1Qnlz/unit-3-project)
+[Trello Board Link](https://trello.com/b/dbz1Qnlz/unit-3-project)
 
 ### Technologies Used
 
@@ -55,7 +55,7 @@ Outlet -- "/trips/delete/:id" --> deleteAction
 
 ##### Index Page
 
-<img src="https://i.imgur.com/tWFXbFv.png" width="600px">
+<img src="https://i.imgur.com/a0CAsYt.png" width="600px">
 <img src="https://i.imgur.com/KL81RA6.png" width="600px">
 
 ##### Show Page

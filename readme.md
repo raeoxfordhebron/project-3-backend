@@ -53,13 +53,13 @@ Outlet -- "/trips/delete/:id" --> deleteAction
 
 ### Wireframes/Mockups
 
-##### Index Page - Desktop and mobile
+#### Index Page - Desktop and mobile
 
 <img src="https://i.imgur.com/a0CAsYt.png" width="600px">
 <img src="https://i.imgur.com/KL81RA6.png" width="600px">
 <img src="https://i.imgur.com/qHv09pg.png" width="300px">
 
-##### Show Page
+#### Show Page - Desktop and mobile
 
 <img src="https://i.imgur.com/NpWI7hJ.png" width="600px">
 <img src="https://i.imgur.com/YF0hRze.png" width="600px">

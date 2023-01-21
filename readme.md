@@ -26,19 +26,19 @@
 App --> Header 
 App --> Outlet 
 Outlet -- "/" --> Index
-Outlet -- "/trips/:id" --> Show
-Outlet -- "/trips/create" --> createAction
-Outlet -- "/trips/update/:id" --> updateAction
-Outlet -- "/trips/delete/:id" --> deleteAction
+Outlet -- "/places/:id" --> Show
+Outlet -- "/places/create" --> createAction
+Outlet -- "/places/update/:id" --> updateAction
+Outlet -- "/places/delete/:id" --> deleteAction
 ```
 
 | Route | Element | Loader | Action | Summary |
 | ----- | ------- | ------ | ------ | ------- |
 | /     | Index   | indexLoader |   | Loads up list of locations |         |
-| /trips/:id | Show | showLoader |  | Loads up an individual location | 
-| /trips/create | |        | createAction | Handles submission of create form for locations | 
-| /trips/update/:id |   |   | updateAction | Handles submission of update form for locations | 
-| /trips/delete/:id |   |   | deleteAction | Handles submission of delete form for locations  
+| /places/:id | Show | showLoader |  | Loads up an individual location | 
+| /places/create | |        | createAction | Handles submission of create form for locations | 
+| /places/update/:id |   |   | updateAction | Handles submission of update form for locations | 
+| /places/delete/:id |   |   | deleteAction | Handles submission of delete form for locations  
 
 
 ### User Stories

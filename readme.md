@@ -15,7 +15,8 @@
 
 - JavaScript
 - HTML
-- Express.js
+- CSS/SCSS
+- React
 - Mongoose
 - MongoDB
 - render.com
@@ -35,10 +36,10 @@ Outlet -- "/places/delete/:id" --> deleteAction
 | Route | Element | Loader | Action | Summary |
 | ----- | ------- | ------ | ------ | ------- |
 | /     | Index   | indexLoader |   | Loads up list of places |         |
-| /trips/:id | Show | showLoader |  | Loads up an individual place | 
-| /trips/create | Create|        | createAction | Handles submission of create form for one place | 
-| /trips/update/:id | Update  |   | updateAction | Handles submission of update form for one place | 
-| /trips/delete/:id | Delete  |   | deleteAction | Handles submission of delete form for one place |  
+| /places/:id | Show | showLoader |  | Loads up an individual place | 
+| /places/create | Create|        | createAction | Handles submission of create form for one place | 
+| /places/update/:id | Update  |   | updateAction | Handles submission of update form for one place | 
+| /places/delete/:id | Delete  |   | deleteAction | Handles submission of delete form for one place |  
 
 ### User Stories
 
@@ -46,6 +47,7 @@ Outlet -- "/places/delete/:id" --> deleteAction
 - As a user, I want to click on one of the places and it will appear on the index page - which will be the show page at that point.
 - As a user, I want to be able to add, edit, and delete places.
 - As a user, I want to be able to check off places as I visit them.
+
 
 ### Schema
 
@@ -81,4 +83,4 @@ Outlet -- "/places/delete/:id" --> deleteAction
 
 ### Link to Project
 
-[Deployed Project Page](https://project-3-backend-cm7x.onrender.com)
+[Deployed Project Page](https://project-3-frontend-uxxk.onrender.com)

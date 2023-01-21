@@ -59,6 +59,13 @@ app.get("/", (req, res) => {
 // Create Route
 
 // Show Route
+app.get("/places/:id", async (req, res) => {
+  try {
+    res.json(await Places.findById(req.params.id))
+  } catch (error) {
+    res.status(400).json(error)
+  }
+})
 
 ///////////////////////////////
 // LISTENER

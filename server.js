@@ -53,8 +53,19 @@ app.get("/", (req, res) => {
 // Index Route
 
 // Delete Route
+app.delete('/places/:id', async (req, res) => {
+  try{
+    res.json(await Places.findByIdAndRemove(req.params.id))   
+  }catch(error){
+    res.status(400).json(error)
+  }
+})
+
 
 // Update Route
+app.put('/places/:id', async (req, res) => {
+  res.json(await Places.findByIdAndUpdate(req.params.id, req.body, { new:true}))
+})
 
 // Create Route
 

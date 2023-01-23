@@ -46,42 +46,38 @@ const Places = mongoose.model("Places", PlaceSchema)
 ///////////////////////////////
 // ROUTES
 ////////////////////////////////
-app.get("/", (req, res) => {
-  res.send("Hello World")
-})
 
 // Index Route
 app.get("/places", async (req, res) => {
-    try{
-        res.json(await Places.find({}))
-    }catch(error){
-        res.status(400).json(error)
-    }
-});
-
-// Delete Route
-app.delete('/places/:id', async (req, res) => {
-  try{
-    res.json(await Places.findByIdAndRemove(req.params.id))   
-  }catch(error){
+  try {
+    res.json(await Places.find({}))
+  } catch (error) {
     res.status(400).json(error)
   }
 })
 
+// Delete Route
+app.delete("/places/:id", async (req, res) => {
+  try {
+    res.json(await Places.findByIdAndRemove(req.params.id))
+  } catch (error) {
+    res.status(400).json(error)
+  }
+})
 
 // Update Route
-app.put('/places/:id', async (req, res) => {
-  res.json(await Places.findByIdAndUpdate(req.params.id, req.body, { new:true}))
+app.put("/places/:id", async (req, res) => {
+  res.json(await Places.findByIdAndUpdate(req.params.id, req.body, { new: true }))
 })
 
 // Create Route
 app.post("/places", async (req, res) => {
-    try{
-      res.json(await Places.create(req.body))
-    }catch(error){
-      res.status(400).json(error)
-    }
-  })
+  try {
+    res.json(await Places.create(req.body))
+  } catch (error) {
+    res.status(400).json(error)
+  }
+})
 
 // Show Route
 app.get("/places/:id", async (req, res) => {

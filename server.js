@@ -75,6 +75,13 @@ app.put('/places/:id', async (req, res) => {
 })
 
 // Create Route
+app.post("/places", async (req, res) => {
+    try{
+      res.json(await Places.create(req.body))
+    }catch(error){
+      res.status(400).json(error)
+    }
+  })
 
 // Show Route
 app.get("/places/:id", async (req, res) => {

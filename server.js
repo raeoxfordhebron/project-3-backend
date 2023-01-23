@@ -51,6 +51,13 @@ app.get("/", (req, res) => {
 })
 
 // Index Route
+app.get("/places", async (req, res) => {
+    try{
+        res.json(await Places.find({}))
+    }catch(error){
+        res.status(400).json(error)
+    }
+});
 
 // Delete Route
 app.delete('/places/:id', async (req, res) => {

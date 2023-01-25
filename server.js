@@ -9,6 +9,8 @@ const DATABASE_URL = process.env.DATABASE_URL
 const cors = require("cors")
 const morgan = require("morgan")
 const bcrypt = require('bcryptjs')
+const AuthRouter = require("./controllers/user")
+const auth = require("./auth/index")
 
 const app = express()
 
@@ -35,16 +37,16 @@ const PlaceSchema = new mongoose.Schema({
 
 const Places = mongoose.model("Places", PlaceSchema)
 
-const userSchema = new mongoose.Schema ({
-  username: {type: String, required: true, unique: true},
-  password: {type: String, required: true}
-}, {timestamps: true})
-
-const User = mongoose.model("Users", userSchema)
 
 ///////////////////////////////
 // ROUTES
 ////////////////////////////////
+//
+app.use("/auth", AuthRouter)
+
+app.get("/", auth, (req, res) => {
+  res.json(req.payload)
+})
 
 // Index Route
 app.get("/places", async (req, res) => {
@@ -56,7 +58,7 @@ app.get("/places", async (req, res) => {
 })
 
 // Delete Route
-app.delete("/places/:id", async (req, res) => {
+app.delete("/places/:id", auth, async (req, res) => {
   try {
     res.json(await Places.findByIdAndRemove(req.params.id))
   } catch (error) {
@@ -65,12 +67,12 @@ app.delete("/places/:id", async (req, res) => {
 })
 
 // Update Route
-app.put("/places/:id", async (req, res) => {
+app.put("/places/:id", auth, async (req, res) => {
   res.json(await Places.findByIdAndUpdate(req.params.id, req.body, { new: true }))
 })
 
 // Create Route
-app.post("/places", async (req, res) => {
+app.post("/places", auth, async (req, res) => {
   try {
     res.json(await Places.create(req.body))
   } catch (error) {
@@ -79,7 +81,7 @@ app.post("/places", async (req, res) => {
 })
 
 // Show Route
-app.get("/places/:id", async (req, res) => {
+app.get("/places/:id", auth, async (req, res) => {
   try {
     res.json(await Places.findById(req.params.id))
   } catch (error) {

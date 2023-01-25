@@ -3,11 +3,12 @@
 ////////////////////////////////
 require("dotenv").config()
 const express = require("express")
-const mongoose = require("mongoose")
+const mongoose = require("./connection/db")
 const PORT = process.env.PORT
 const DATABASE_URL = process.env.DATABASE_URL
 const cors = require("cors")
 const morgan = require("morgan")
+const bcrypt = require('bcryptjs')
 
 const app = express()
 
@@ -18,15 +19,6 @@ app.use(cors())
 app.use(morgan("dev"))
 app.use(express.json())
 
-///////////////////////////////
-// DATABASE CONNECTION
-////////////////////////////////
-mongoose.connect(DATABASE_URL)
-
-mongoose.connection
-  .on("open", () => console.log("You are connected to mongoose."))
-  .on("close", () => console.log("You are disconnected from mongoose."))
-  .on("error", (error) => console.log(error))
 
 ///////////////////////////////
 // MODELS
@@ -94,6 +86,12 @@ app.get("/places/:id", async (req, res) => {
     res.status(400).json(error)
   }
 })
+
+///////////////////////////////
+// User Routes
+////////////////////////////////
+
+
 
 ///////////////////////////////
 // LISTENER

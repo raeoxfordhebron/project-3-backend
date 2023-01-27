@@ -13,6 +13,7 @@ const AuthRouter = require("./controllers/user")
 const auth = require("./auth/index")
 const SECRET = process.env.SECRET
 const jwt = require("jsonwebtoken")
+const User = require("./models/user")
 
 const app = express()
 
@@ -44,13 +45,10 @@ const Places = mongoose.model("Places", PlaceSchema)
 ///////////////////////////////
 // ROUTES
 ////////////////////////////////
-//
-app.use("/auth", AuthRouter)
 
 app.get("/", auth, (req, res) => {
   res.json(req.payload)
 })
-const User = require("./models/user")
 
 app.post("/signup", async (req, res) => {
   try {

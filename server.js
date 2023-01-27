@@ -47,6 +47,19 @@ app.use("/auth", AuthRouter)
 app.get("/", auth, (req, res) => {
   res.json(req.payload)
 })
+const User = require("./models/user")
+
+app.post("/signup", async (req, res) => {
+  try {
+  req.body.password = await bcrypt.hash(req.body.password, 10)
+  console.log("password hashed", req.body)
+  const newUser = await User.create(req.body)
+  console.log(newUser)
+  res.status(200).json(newUser)
+  } catch (error) {
+      res.status(400).json(error)
+  }
+})
 
 // Index Route
 app.get("/places", async (req, res) => {

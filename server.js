@@ -11,6 +11,8 @@ const morgan = require("morgan")
 const bcrypt = require('bcryptjs')
 const AuthRouter = require("./controllers/user")
 const auth = require("./auth/index")
+const SECRET = process.env.SECRET
+const jwt = require("jsonwebtoken")
 
 const app = express()
 
@@ -20,6 +22,7 @@ const app = express()
 app.use(cors())
 app.use(morgan("dev"))
 app.use(express.json())
+app.use(express.urlencoded({extended: false}))
 
 
 ///////////////////////////////
@@ -57,6 +60,27 @@ app.post("/signup", async (req, res) => {
   console.log(newUser)
   res.status(200).json(newUser)
   } catch (error) {
+      res.status(400).json(error)
+  }
+})
+
+app.post("/login", async (req, res) => {
+  try {
+  const {username, password} = req.body
+  const user = await User.findOne({username})
+  if (user) {
+      const match = await bcrypt.compare(password, user.password)
+      console.log(match)
+      if(match){
+          const token = await jwt.sign({username}, SECRET)
+          res.status(200).json({token})
+      } else {
+          res.status(400).json({error: "Password Does Not Match"})
+      }
+  }  else {
+      res.status(400).json({error: "User Does Not Exist"})
+  }
+  } catch(error) {
       res.status(400).json(error)
   }
 })

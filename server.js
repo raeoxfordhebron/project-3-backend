@@ -9,7 +9,6 @@ const DATABASE_URL = process.env.DATABASE_URL
 const cors = require("cors")
 const morgan = require("morgan")
 const bcrypt = require('bcryptjs')
-const AuthRouter = require("./controllers/user")
 const auth = require("./auth/index")
 const SECRET = process.env.SECRET
 const jwt = require("jsonwebtoken")
